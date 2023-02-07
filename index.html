@@ -12,17 +12,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body id="anchor-home">
     <!-- NAV bar with grid solution -->
-    <ul class="grid-nav">
-        <li class="grid-nav-col-left1 nav-left">Home</li>
-        <li class="grid-nav-col-left2 nav-left">About</li>
-        <li class="grid-nav-col-left3 nav-left">Skills</li>
-        <li class="grid-nav-col-left4 nav-left">Portfolio</li>
-        <li class="grid-nav-col-left5 nav-left">Contact</li>
-        <li class="grid-nav-col-right1 nav-right"><img id="github" src="github.svg"></li>
-        <li class="grid-nav-col-right2 nav-right"><img id="linkedin" src="linkedin.svg"></li>
-    </ul>
+    <div class="grid-nav" id="grid-nav">
+        <a class="grid-nav-col-left1 nav-left" href="#anchor-home">Home</a>
+        <a class="grid-nav-col-left2 nav-left" href="#anchor-about">About</a>
+        <a class="grid-nav-col-left3 nav-left" href="#anchor-skills">Skills</a>
+        <a class="grid-nav-col-left4 nav-left" href="#anchor-portfolio">Portfolio</a>
+        <a class="grid-nav-col-left5 nav-left" href="#anchor-contact">Contact</a>
+        <img class="grid-nav-col-right1 nav-right" id="github" src="github.svg">
+        <img class="grid-nav-col-right2 nav-right" id="linkedin" src="linkedin.svg">
+    </div>
     <!-- Front page with grid -->
     <div class="grid-template">
         <selection class="grid-column left">
@@ -34,11 +34,14 @@
             >Electrical Engineer</h2>
         </selection>
         <selection class="grid-column right">
-            <img class="image" src="profile.PNG" alt="Profile picture" data-aos="fade-left" data-aos-duration="2000" >
+            <img class="image" src="profile.PNG" alt="Profile picture" 
+            data-aos="fade-left" 
+            data-aos-duration="2000" 
+            >
         </selection>
     </div>
     <!-- About me -->
-    <div class="about">
+    <div class="about" id="anchor-about">
         <h2 class="section">About me:</h2>
         <p>Since I was young, I love the 
             challenges and understand 
@@ -51,7 +54,7 @@
             outdoor activities. </p>
     </div>
     <!-- Skills -->
-    <div class="skills-list">
+    <div class="skills-list" id="anchor-skills">
         <h2 class="section">Skills:</h2>
         <ul class="skills">
             <li class="skills-element"><img src="html5.svg"></li>
@@ -61,29 +64,21 @@
         </ul>
     </div>
     <!-- Portfolio -->
-    <div class="portfolio-list">
+    <div class="portfolio-list" id="anchor-portfolio">
         <h2 class="section">Portfolio:</h2>
         <ul class="portfolio">
-            <li class="portfolio-element"><img class="portfolio-img" id="portfolio-img" src="bmi.PNG" width="400rem"></li>
-            <li class="portfolio-element"><img class="portfolio-img" id="portfolio-img" src="bmi.PNG" width="400rem"></li>
-            <li class="portfolio-element"><img class="portfolio-img" id="portfolio-img" src="bmi.PNG" width="400rem"></li>
-            <li class="portfolio-element"><img class="portfolio-img" id="portfolio-img" src="bmi.PNG" width="400rem"></li>
-            <li class="portfolio-element"><img class="portfolio-img" id="portfolio-img" src="bmi.PNG" width="400rem"></li>
             <li class="portfolio-element"><img class="portfolio-img" id="portfolio-img" src="bmi.PNG" width="400rem"></li>
         </ul>
     </div>
     <!-- Contact me -->
-    <div class="contact">
-        <h2 class="section">Contact me:</h2>
-        <p>Since I was young, I love the 
-            challenges and understand 
-            complex devices. I have years of experience with field of Developer 
-            and Test Engineer in Testing, Debugging Analog and Digital circuits.
-            I love work on 
-            international projects. I skilled at quickly learning new 
-            concepts. I quit my job, that I can kick start my Front End Developer career. 
-            I enjoy the music, sports, and any 
-            outdoor activities. </p>
+    <div class="contact" id="anchor-contact">
+        <div class="contact-container">
+            <h2 class="contact-title">Contact me:</h2>
+            <input type="text" class="name" id="name" placeholder="Your name">
+            <input type="text" class="email" id="email" placeholder="Your e-mail address">
+            <textarea type="text" class="message" id="message" placeholder="Your message"></textarea>
+            <button class="sendmessage" id="sendmessage">SEND MESSAGE</button>
+        </div>
     </div>
     <!-- Script -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
