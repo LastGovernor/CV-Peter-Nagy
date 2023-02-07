@@ -159,6 +159,10 @@ p {
 .portfolio-img:hover {
     transform: scale(1.2);
 }
+
+.portfolio-img:active {
+    transform: scale(1);
+}
 /* Contact me */
 .contact {
     margin-bottom: 15rem;
