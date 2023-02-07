@@ -5,24 +5,90 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webpage</title>
+    <title>CV Peter Nagy</title>
     <link rel="icon" type="image/png" href="https://www.google.com/s2/favicons?domain=jacinto.design">
+    <!-- AOS API to animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="grid-container">
-        <div class="grid-column">
-            <h1>Hello, I'm Peter Nagy</h1>
-        </div>
-        <div class="grid-column">
-            <img src="profile.PNG" alt="">
-        </div>
-
-        
-
+    <!-- NAV bar with grid solution -->
+    <ul class="grid-nav">
+        <li class="grid-nav-col-left1 nav-left">Home</li>
+        <li class="grid-nav-col-left2 nav-left">About</li>
+        <li class="grid-nav-col-left3 nav-left">Skills</li>
+        <li class="grid-nav-col-left4 nav-left">Portfolio</li>
+        <li class="grid-nav-col-left5 nav-left">Contact</li>
+        <li class="grid-nav-col-right1 nav-right"><img id="github" src="github.svg"></li>
+        <li class="grid-nav-col-right2 nav-right"><img id="linkedin" src="linkedin.svg"></li>
+    </ul>
+    <!-- Front page with grid -->
+    <div class="grid-template">
+        <selection class="grid-column left">
+            <h1 data-aos="zoom-in-right" 
+            data-aos-duration="1500" 
+            >Hello, I'm Peter Nagy</h1>
+            <h2 data-aos="zoom-in-right"
+            data-aos-duration="1200" 
+            >Electrical Engineer</h2>
+        </selection>
+        <selection class="grid-column right">
+            <img class="image" src="profile.PNG" alt="Profile picture" data-aos="fade-left" data-aos-duration="2000" >
+        </selection>
+    </div>
+    <!-- About me -->
+    <div class="about">
+        <h2 class="section">About me:</h2>
+        <p>Since I was young, I love the 
+            challenges and understand 
+            complex devices. I have years of experience with field of Developer 
+            and Test Engineer in Testing, Debugging Analog and Digital circuits.
+            I love work on 
+            international projects. I skilled at quickly learning new 
+            concepts. I quit my job, that I can kick start my Front End Developer career. 
+            I enjoy the music, sports, and any 
+            outdoor activities. </p>
+    </div>
+    <!-- Skills -->
+    <div class="skills-list">
+        <h2 class="section">Skills:</h2>
+        <ul class="skills">
+            <li class="skills-element"><img src="html5.svg"></li>
+            <li class="skills-element"><img src="css3.svg"></li>
+            <li class="skills-element"><img src="javascript.svg"></li>
+        </ul>
+    </div>
+    <!-- Portfolio -->
+    <div class="portfolio-list">
+        <h2 class="section">Portfolio:</h2>
+        <ul class="portfolio">
+            <li class="portfolio-element"><img class="portfolio-img" src="bmi.PNG" width="400rem"></li>
+            <li class="portfolio-element"><img class="portfolio-img" src="bmi.PNG" width="400rem"></li>
+            <li class="portfolio-element"><img class="portfolio-img" src="bmi.PNG" width="400rem"></li>
+            <li class="portfolio-element"><img class="portfolio-img" src="bmi.PNG" width="400rem"></li>
+            <li class="portfolio-element"><img class="portfolio-img" src="bmi.PNG" width="400rem"></li>
+            <li class="portfolio-element"><img class="portfolio-img" src="bmi.PNG" width="400rem"></li>
+        </ul>
+    </div>
+    <!-- Contact me -->
+    <div class="contact">
+        <h2 class="section">Contact me:</h2>
+        <p>Since I was young, I love the 
+            challenges and understand 
+            complex devices. I have years of experience with field of Developer 
+            and Test Engineer in Testing, Debugging Analog and Digital circuits.
+            I love work on 
+            international projects. I skilled at quickly learning new 
+            concepts. I quit my job, that I can kick start my Front End Developer career. 
+            I enjoy the music, sports, and any 
+            outdoor activities. </p>
     </div>
     <!-- Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
     <script src="script.js"></script>
 </body>
 
