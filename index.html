@@ -13,19 +13,19 @@
 </head>
 
 <body id="anchor-home">
-    <!-- NAV bar with grid solution -->
-    <div class="grid-nav" id="grid-nav">
-        <a class="grid-nav-col-left1 nav-left" href="#anchor-home">Home</a>
-        <a class="grid-nav-col-left2 nav-left" href="#anchor-about">About</a>
-        <a class="grid-nav-col-left3 nav-left" href="#anchor-skills">Skills</a>
-        <a class="grid-nav-col-left4 nav-left" href="#anchor-portfolio">Portfolio</a>
-        <a class="grid-nav-col-left5 nav-left" href="#anchor-contact">Contact</a>
-        <img class="grid-nav-col-right1 nav-right" id="github" src="github.svg">
-        <img class="grid-nav-col-right2 nav-right" id="linkedin" src="linkedin.svg">
+    <!-- NAV bar with Flex solution -->
+    <div class="flex-nav" id="flex-nav">
+        <a class="nav" id="home">Home</a>
+        <a class="nav" id="about">About</a>
+        <a class="nav" id="skills">Skills</a>
+        <a class="nav" id="portfolio">Portfolio</a>
+        <a class="nav" id="contact">Contact</a>
+        <img class="nav" id="github" src="github.svg">
+        <img class="nav" id="linkedin" src="linkedin.svg">
     </div>
-    <!-- Front page with grid -->
-    <div class="grid-template">
-        <selection class="grid-column left">
+    <!-- Front page with flex -->
+    <div class="flex-template">
+        <selection class="flex">
             <h1 data-aos="zoom-in-right" 
             data-aos-duration="1500" 
             >Hello, I'm Peter Nagy</h1>
@@ -33,7 +33,7 @@
             data-aos-duration="1200" 
             >Electrical Engineer</h2>
         </selection>
-        <selection class="grid-column right">
+        <selection class="flex">
             <img class="image" src="profile.PNG" alt="Profile picture" 
             data-aos="fade-left" 
             data-aos-duration="2000" 
@@ -74,17 +74,26 @@
     <div class="contact" id="anchor-contact">
         <div class="contact-container">
             <h2 class="contact-title">Contact me:</h2>
-            <input type="text" class="name" id="name" placeholder="Your name">
-            <input type="text" class="email" id="email" placeholder="Your e-mail address">
-            <textarea type="text" class="message" id="message" placeholder="Your message"></textarea>
-            <button class="sendmessage" id="sendmessage">SEND MESSAGE</button>
+            <input type="text" class="contact name" id="name" placeholder="Your name">
+            <input type="text" class="contact email" id="email" placeholder="Your e-mail address">
+            <input type="text" class="contact subject" id="subject" placeholder="Subject">
+            <textarea type="text" class="message" id="message-content" placeholder="Your message"></textarea>
+            <button class="contact sendmessage" id="sendmessage">SEND MESSAGE</button>
         </div>
     </div>
+    <p class="bottom-label">E-mail: p.nagy9@gmail.com</p>
     <!-- Script -->
+    <!-- AOS to animations -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init();
-      </script>
+        AOS.init({
+            delay: 200,
+            duration: 1500,
+        });
+    </script>
+
+    <!-- SmtpJS server to email sending -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="script.js"></script>
 </body>
 
