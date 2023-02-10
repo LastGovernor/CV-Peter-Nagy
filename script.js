@@ -86,9 +86,9 @@ linkedin.addEventListener('click', function(){
 });
 // Github
 github.addEventListener('click', function(){
-    window.open('https://github.com/LastGovernor' , '_blank');
+    window.open('https://github.com/P-e-t-e-r-N-a-g-y' , '_blank');
 });
 // Portfolio: BMI Calculator
 bmiCalc.addEventListener('click', function(){
-    window.open('https://lastgovernor.github.io/BMI-Calculator/' , '_blank');
+    window.open('https://p-e-t-e-r-n-a-g-y.github.io/BMI-Calculator/' , '_blank');
 });
