@@ -257,4 +257,9 @@ p {
         width: 100%;
         font-size: 1rem;
     }
+    .sendmessage {
+        border-radius: 15px;
+        padding: 0.5rem;
+        font-size: 0.5rem;
+    }
 }
