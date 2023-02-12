@@ -103,26 +103,26 @@ p {
 /* Portfolio */
 .portfolio {
     list-style-type: none;
-    cursor: pointer;
-    width: 20%;
-    align-items: center;
+    width: 60%;
     justify-content: center;
+    align-items: center;
     margin: auto;
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
 
 }
 
-.portfolio-img {
-    width: 90%;
-}
-
 .portfolio-img{
     border: 2px solid black;
-    border-radius: 25px;
+    height: auto;
+    border-radius: 5px;
+    margin: 1rem;
+    width: 50vh;
 }
 
 .portfolio-img:hover {
+    cursor: pointer;
     transform: scale(1.1);
 }
 
@@ -140,7 +140,7 @@ p {
     padding: 2rem;
     gap: 1rem;
     border: 2px solid rgba(0, 0, 0, 0.8);
-    border-radius: 25px;
+    border-radius: 5px;
 }
 .contact {
     border-radius: 5px;
@@ -158,7 +158,7 @@ p {
     width: 40%;
     background-color: rgb(0, 0, 0);
     color: white;
-    border-radius: 25px;
+    border-radius: 5px;
     padding: 1rem;
     cursor: pointer;
     font-size: 1rem;
@@ -237,20 +237,12 @@ p {
         width: 80%;
         text-align: center;
     }
-    .portfolio {
-        width: 90%;
-        margin: auto;
-        padding: auto;
-        display: block;
-    
-    }
-    .portfolio-img{
-        border-radius: 15px;
+    .portfolio-img {
+        width: 30vh;
     }
 
     .contact-container {
         width: 80%;
-        border-radius: 15px;
     }
     
     .bottom-label{
@@ -258,7 +250,6 @@ p {
         font-size: 1rem;
     }
     .sendmessage {
-        border-radius: 15px;
         padding: 0.5rem;
         font-size: 0.5rem;
     }

@@ -14,7 +14,6 @@ const subject = document.getElementById('subject');
 const linkedin = document.getElementById('linkedin');
 const github = document.getElementById('github');
 // Sticky Nav bar elements
-const bmiCalc = document.getElementById('portfolio-img');
 let navBar = document.querySelector('#flex-nav');
 let navPos = navBar.getBoundingClientRect().top;
 // Sticky Nav bar
@@ -88,7 +87,12 @@ linkedin.addEventListener('click', function(){
 github.addEventListener('click', function(){
     window.open('https://github.com/P-e-t-e-r-N-a-g-y' , '_blank');
 });
-// Portfolio: BMI Calculator
-bmiCalc.addEventListener('click', function(){
+// Portfolio:
+document.querySelector('#portfolio-img1').addEventListener('click', function(){
     window.open('https://p-e-t-e-r-n-a-g-y.github.io/BMI-Calculator/' , '_blank');
 });
+
+document.querySelector('#portfolio-img2').addEventListener('click', function(){
+    window.open('https://p-e-t-e-r-n-a-g-y.github.io/To-Do-List/' , '_blank');
+});
+
