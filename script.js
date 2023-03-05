@@ -4,6 +4,9 @@ const about = document.getElementById('about');
 const skills = document.getElementById('skills');
 const portfolio = document.getElementById('portfolio');
 const contact = document.getElementById('contact');
+// Hamburger nav 
+const navToggle = document.querySelector('.nav-toggle');
+const navLeft = document.querySelector('.nav-left');
 // Contact form
 const sendBtn = document.getElementById("sendmessage");
 const name = document.getElementById('name');
@@ -14,7 +17,7 @@ const subject = document.getElementById('subject');
 const linkedin = document.getElementById('linkedin');
 const github = document.getElementById('github');
 // Sticky Nav bar elements
-let navBar = document.querySelector('#flex-nav');
+let navBar = document.querySelector('.flex-nav');
 let navPos = navBar.getBoundingClientRect().top;
 // Sticky Nav bar
 window.addEventListener('scroll', e => {
@@ -25,7 +28,12 @@ window.addEventListener('scroll', e => {
         navBar.classList.remove('sticky');
     }
 });
+// Hamburger nav
+navToggle.addEventListener('click', toggleButton);
 
+function toggleButton() {
+    navLeft.classList.toggle('active');
+}
 // SMTPJS to email sending
 function sendEmail(){
     if(email.value !== ''){
@@ -34,20 +42,24 @@ function sendEmail(){
             To: 'p.nagy9@gmail.com',
             From: 'p.nagy9@gmail.com',
             Subject: subject.value,
-            Body: `Name: ${name.value}\nEmail: ${email.value}\n\n ${messageCont.value}`
+            Body: `Name: ${name.value}\nEmail: ${email.value}\n\n ${messageCont.value}`,
+    
         }).then(
             message => alert(message)
         );
-    }else{
-        alert("Your e-mail address is misssing!");
     }
+    else{
+        alert('Please give an email address!');
+    }
+    
+    
     name.value = '';
-        email.value = '';
-        messageCont.value = '';
-        subject.value = '';
+    email.value = '';
+    messageCont.value = '';
+    subject.value = '';
 }
 
-sendBtn.addEventListener('click', sendEmail)
+sendBtn.addEventListener('click', sendEmail);
 
 // ScrollToView
 function scrollToPos(a){

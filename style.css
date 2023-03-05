@@ -10,39 +10,68 @@
 }
 
 /* NAV bar with flex solution */
-#flex-nav {
+.nav-toggle {
+    display: none;
+    position: absolute;
+    left: 2rem;
+    top: 1.3rem;
+    height: 2.5rem;
+    width: 2rem;
+    font-size: 1rem;
+    background-color: black;
+    color: white;
+    border-radius: 2px;
+}
+
+.nav-toggle:hover{
+    transform: scale(1.1);
+}
+
+.nav-toggle:active {
+    transform: scale(1);
+}
+
+.flex-nav {
     display: flex;
-    justify-content: left;
-    flex-wrap: wrap;
     align-items: center;
     background-color: #000000;
     color: white;
-    padding: 0.5rem;
     font-size: 2rem;
     max-width: 100%;
     z-index: 2;
 }
 
-.nav-left {
+.nav-left ul {
     display: flex;
     margin-left: 2rem;
-    gap:  1rem 3rem;
-    margin-right: auto;
-
+    gap: 1rem 3rem;
+    list-style-type: none;
 }
 
 .nav-right {
-    display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 1rem;
+    padding: 1rem;
+    margin-left: auto;
     margin-right: 2rem;
+}
+
+.desktop {
+    display: block;
+}
+
+.phone {
+    display: none;
 }
 
 .sticky {
     position: fixed;
     top: 0;
     width: 100%;
+}
+
+.nav {
+    vertical-align: middle;
+    align-items: center;
 }
 
 .nav:hover {
@@ -208,39 +237,40 @@ p {
     font-size: 2rem;
 }
 
-.bottom-label{
-    width: 100%;
-    text-align: center;
-    background-color: black;
-    color: white;
-    font-family: Audiowide, sans-serif;
-    padding: 1rem;
-}
-
 /* Setting to phones */
-@media only screen and (max-width: 1400px) {
-    #flex-nav {
-        font-size: 2rem;
+@media only screen and (max-width: 1200px) {
+    .nav-toggle {
+        display: block;
     }
 
-}
-@media only screen and (max-width: 1000px) {
-    #flex-nav {
-        font-size: 1rem;
-        gap: 1rem;
+    .flex-nav {
+        font-size: 1.5rem;
+        flex-direction: column;
     }
 
     .nav-left {
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        justify-content: center;
+        display: none;
+        margin: 0.5rem;
+    }
+
+    .nav-left.active {
+        display: block;
+    }
+
+    .nav-left ul {
+        flex-direction: column;
+        padding: 1rem;
         margin: auto;
     }
 
-    .nav-right {
-        justify-content: center;
-        margin: auto;
+    .desktop {
+        display: none;
     }
+    
+    .phone {
+        display: block;
+    }
+    
 
     .flex-template {
         flex-direction: column;
@@ -285,9 +315,6 @@ p {
         width: 80%;
     }
     
-    .bottom-label{
-        font-size: 1rem;
-    }
     .sendmessage {
         padding: 0.5rem;
         font-size: 0.5rem;

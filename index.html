@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV Peter Nagy</title>
+    <title>Portfolio Peter Nagy</title>
     <link rel="icon" type="image/png" href="https://www.google.com/s2/favicons?domain=jacinto.design">
     <!-- AOS API to animations -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -14,92 +14,105 @@
 
 <body id="anchor-home">
     <!-- NAV bar with Flex solution -->
-    <div class="flex-nav" id="flex-nav">
-        <div class="nav-left">
-            <a class="nav" id="home">Home</a>
-            <a class="nav" id="about">About</a>
-            <a class="nav" id="skills">Skills</a>
-            <a class="nav" id="portfolio">Portfolio</a>
-            <a class="nav" id="contact">Contact</a>
+    <header>
+        <nav class="flex-nav">
+            <button class="nav-toggle">
+                <span class="hamburger">&#9776;</span>
+            </button>
+            <div class="nav-right phone">
+                <img class="nav" id="github" alt="img" src="images/github.svg">
+                <img class="nav" id="linkedin" alt="img" src="images/linkedin.svg">
+            </div>
+            <div class="nav-left">
+                <ul>
+                    <li class="nav"><a id="home">Home</a></li>
+                    <li class="nav"><a  id="about">About</a></li>
+                    <li class="nav"><a id="skills">Skills</a></li>
+                    <li class="nav"><a id="portfolio">Portfolio</a></li>
+                    <li class="nav"><a id="contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-right desktop">
+                <img class="nav" id="github" alt="img" src="images/github.svg">
+                <img class="nav" id="linkedin" alt="img" src="images/linkedin.svg">
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Front page with flex -->
+        <div class="flex-template">
+            <selection class="flex">
+                <h1 data-aos="zoom-in-right" 
+                data-aos-duration="1500" 
+                >Hello, I'm Peter Nagy</h1>
+                <h2 data-aos="zoom-in-right"
+                data-aos-duration="1200" 
+                >Electrical Engineer</h2>
+            </selection>
+            <selection class="flex">
+                <img class="image" src="images/profile.PNG" alt="Profile picture" 
+                data-aos="fade-left" 
+                data-aos-duration="2000" 
+                >
+            </selection>
         </div>
-        <div class="nav-right">
-            <img class="nav" id="github" src="github.svg">
-            <img class="nav" id="linkedin" src="linkedin.svg">
+        <!-- About me -->
+        <div class="about" id="anchor-about">
+            <h2 class="section">About me:</h2>
+            <p>Since I was young, I love the 
+                challenges and understand 
+                complex devices. I have years of experience with field of Developer 
+                and Test Engineer in Testing, Debugging Analog and Digital circuits.
+                I love work on 
+                international projects. I skilled at quickly learning new 
+                concepts. I quit my job, that I can kick start my Front End Developer career. 
+                I enjoy the music, sports, and any 
+                outdoor activities. </p>
         </div>
-    </div>
-    <!-- Front page with flex -->
-    <div class="flex-template">
-        <selection class="flex">
-            <h1 data-aos="zoom-in-right" 
-            data-aos-duration="1500" 
-            >Hello, I'm Peter Nagy</h1>
-            <h2 data-aos="zoom-in-right"
-            data-aos-duration="1200" 
-            >Electrical Engineer</h2>
-        </selection>
-        <selection class="flex">
-            <img class="image" src="profile.PNG" alt="Profile picture" 
-            data-aos="fade-left" 
-            data-aos-duration="2000" 
-            >
-        </selection>
-    </div>
-    <!-- About me -->
-    <div class="about" id="anchor-about">
-        <h2 class="section">About me:</h2>
-        <p>Since I was young, I love the 
-            challenges and understand 
-            complex devices. I have years of experience with field of Developer 
-            and Test Engineer in Testing, Debugging Analog and Digital circuits.
-            I love work on 
-            international projects. I skilled at quickly learning new 
-            concepts. I quit my job, that I can kick start my Front End Developer career. 
-            I enjoy the music, sports, and any 
-            outdoor activities. </p>
-    </div>
-    <!-- Skills -->
-    <div class="skills-list" id="anchor-skills">
-        <h2 class="section">Skills:</h2>
-        <ul class="skills">
-            <li class="skills-element"><img src="html5.svg"></li>
-            <li class="skills-element"><img src="css3.svg"></li>
-            <li class="skills-element"><img src="javascript.svg"></li>
-            <li class="skills-element"><img src="github2.svg"></li>
-            <li class="skills-element"><img src="vscode.svg"></li>
-        </ul>
-    </div>
-    <!-- Portfolio -->
-    <div class="portfolio-list" id="anchor-portfolio">
-        <h2 class="section">Portfolio:</h2>
-        <ul class="portfolio">
-            <li class="portfolio-element"><img class="portfolio-img" id="portfolio-img1" src="bmi.PNG" width="400rem"></li>
-            <li class="portfolio-element"><img class="portfolio-img" id="portfolio-img2" src="tdl.PNG" width="400rem"></li>
-        </ul>
-    </div>
-    <!-- Contact me -->
-    <div class="contact" id="anchor-contact">
-        <div class="contact-container">
-            <h2 class="contact-title">Contact me:</h2>
-            <input type="text" class="contact name" id="name" placeholder="Your name">
-            <input type="text" class="contact email" id="email" placeholder="Your e-mail address">
-            <input type="text" class="contact subject" id="subject" placeholder="Subject">
-            <textarea type="text" class="message" id="message-content" placeholder="Your message"></textarea>
-            <button class="contact sendmessage" id="sendmessage">SEND MESSAGE</button>
+        <!-- Skills -->
+        <div class="skills-list" id="anchor-skills">
+            <h2 class="section">Skills:</h2>
+            <ul class="skills">
+                <li class="skills-element"><img alt="img" src="images/html5.svg"></li>
+                <li class="skills-element"><img alt="img" src="images/css3.svg"></li>
+                <li class="skills-element"><img alt="img" src="images/javascript.svg"></li>
+                <li class="skills-element"><img alt="img" src="images/github2.svg"></li>
+                <li class="skills-element"><img alt="img" src="images/vscode.svg"></li>
+            </ul>
         </div>
-    </div>
-    <p class="bottom-label">E-mail: p.nagy9@gmail.com</p>
-    <!-- Script -->
-    <!-- AOS to animations -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            delay: 200,
-            duration: 1500,
-        });
-    </script>
-    <!-- SmtpJS server to email sending -->
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script src="script.js"></script>
+        <!-- Portfolio -->
+        <div class="portfolio-list" id="anchor-portfolio">
+            <h2 class="section">Portfolio:</h2>
+            <ul class="portfolio">
+                <li class="portfolio-element"><img class="portfolio-img" id="portfolio-img1" alt="img" src="images/bmi.PNG"></li>
+                <li class="portfolio-element"><img class="portfolio-img" id="portfolio-img2" alt="img" src="images/tdl.PNG"></li>
+            </ul>
+        </div>
+        <!-- Contact me -->
+        <div class="contact" id="anchor-contact">
+            <div class="contact-container">
+                <h2 class="contact-title">Contact me:</h2>
+                <input type="text" class="contact name" id="name" placeholder="Your name">
+                <input type="email" class="contact email" id="email" placeholder="Your e-mail address">
+                <input type="text" class="contact subject" id="subject" placeholder="Subject">
+                <textarea type="text" class="message" id="message-content" placeholder="Your message"></textarea>
+                <button class="contact sendmessage" id="sendmessage">SEND MESSAGE</button>
+            </div>
+        </div>
+        <!-- Script -->
+        <!-- AOS to animations -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                delay: 200,
+                duration: 1500,
+            });
+        </script>
+        <!-- SmtpJS server to email sending -->
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script src="script.js"></script>
+    </main>
+    
 </body>
 
 </html>
