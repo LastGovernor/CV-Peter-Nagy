@@ -14,7 +14,7 @@
     display: none;
     position: absolute;
     left: 2rem;
-    top: 1.3rem;
+    top: 0.8rem;
     height: 2.5rem;
     width: 2rem;
     font-size: 1rem;
@@ -32,11 +32,13 @@
 }
 
 .flex-nav {
-    display: flex;
+    position: relative;
     align-items: center;
+    height: 4rem;
     background-color: #000000;
     color: white;
     font-size: 2rem;
+    padding: 0.8rem;
     max-width: 100%;
     z-index: 2;
 }
@@ -49,18 +51,10 @@
 }
 
 .nav-right {
-    align-items: center;
-    padding: 1rem;
-    margin-left: auto;
-    margin-right: 2rem;
-}
+    position: absolute;
+    top: 0.45rem;
+    right: 2rem;
 
-.desktop {
-    display: block;
-}
-
-.phone {
-    display: none;
 }
 
 .sticky {
@@ -124,6 +118,7 @@ h2 {
 .section{
     width: 70%;
     margin: auto;
+    margin-top: 1rem;
     padding: 3rem;
     text-align: left;
 }
@@ -250,11 +245,15 @@ p {
 
     .nav-left {
         display: none;
-        margin: 0.5rem;
     }
 
     .nav-left.active {
+        margin-top: 2rem;
         display: block;
+    }
+
+    .flex-nav.active {
+        height: auto;
     }
 
     .nav-left ul {
@@ -262,16 +261,7 @@ p {
         padding: 1rem;
         margin: auto;
     }
-
-    .desktop {
-        display: none;
-    }
     
-    .phone {
-        display: block;
-    }
-    
-
     .flex-template {
         flex-direction: column;
         margin-top: 10rem;

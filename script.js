@@ -7,15 +7,13 @@ const contact = document.getElementById('contact');
 // Hamburger nav 
 const navToggle = document.querySelector('.nav-toggle');
 const navLeft = document.querySelector('.nav-left');
+const nav = document.querySelector('.flex-nav');
 // Contact form
 const sendBtn = document.getElementById("sendmessage");
 const name = document.getElementById('name');
 const email = document.getElementById('email');
 const messageCont = document.getElementById('message-content');
 const subject = document.getElementById('subject');
-// Social media buttons
-const linkedin = document.getElementById('linkedin');
-const github = document.getElementById('github');
 // Sticky Nav bar elements
 let navBar = document.querySelector('.flex-nav');
 let navPos = navBar.getBoundingClientRect().top;
@@ -33,6 +31,7 @@ navToggle.addEventListener('click', toggleButton);
 
 function toggleButton() {
     navLeft.classList.toggle('active');
+    nav.classList.toggle('active');
 }
 // SMTPJS to email sending
 function sendEmail(){
@@ -51,7 +50,6 @@ function sendEmail(){
     else{
         alert('Please give an email address!');
     }
-    
     
     name.value = '';
     email.value = '';
@@ -90,21 +88,3 @@ portfolio.addEventListener('click', function(){
 contact.addEventListener('click', function(){
     scrollToPos('anchor-contact');
 });
-
-// Linkedin
-linkedin.addEventListener('click', function(){
-    window.open('https://www.linkedin.com/in/p%C3%A9ter-nagy-3ba647143' , '_blank');
-});
-// Github
-github.addEventListener('click', function(){
-    window.open('https://github.com/P-e-t-e-r-N-a-g-y' , '_blank');
-});
-// Portfolio:
-document.querySelector('#portfolio-img1').addEventListener('click', function(){
-    window.open('https://p-e-t-e-r-n-a-g-y.github.io/BMI-Calculator/' , '_blank');
-});
-
-document.querySelector('#portfolio-img2').addEventListener('click', function(){
-    window.open('https://p-e-t-e-r-n-a-g-y.github.io/To-Do-List/' , '_blank');
-});
-
