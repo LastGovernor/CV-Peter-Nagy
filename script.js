@@ -6,7 +6,7 @@ const portfolio = document.getElementById('portfolio');
 const contact = document.getElementById('contact');
 // Hamburger nav 
 const navToggle = document.querySelector('.nav-toggle');
-const navLeft = document.querySelector('.nav-left');
+const navCenter = document.querySelector('.nav-center');
 const nav = document.querySelector('.flex-nav');
 // Contact form
 const sendBtn = document.getElementById("sendmessage");
@@ -30,7 +30,7 @@ window.addEventListener('scroll', e => {
 navToggle.addEventListener('click', toggleButton);
 
 function toggleButton() {
-    navLeft.classList.toggle('active');
+    navCenter.classList.toggle('active');
     nav.classList.toggle('active');
 }
 // SMTPJS to email sending
