@@ -163,31 +163,31 @@ p {
 
 /* Portfolio */
 .portfolio {
-    list-style-type: none;
-    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 22rem));
     justify-content: center;
-    align-items: center;
+    list-style-type: none;
+    width: 80%;
     margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
 }
 
 .portfolio-img{
+    background-color: white;
     border: 2px solid black;
-    height: auto;
     border-radius: 5px;
+    height: 300px;
+    width: 300px;
     margin: 1rem;
-    width: 50vh;
+    object-fit: contain;
 }
 
 .portfolio-img:hover {
     cursor: pointer;
-    transform: scale(1.1);
+    filter: drop-shadow(5px 5px 5px black);
 }
 
 .portfolio-img:active {
-    transform: scale(1);
+    filter: none;
 }
 /* Contact me */
 .contact-container {
@@ -310,14 +310,11 @@ p {
         font-size: 1.5rem;
         width: 80%;
     }
-    .portfolio-img {
-        width: 30vh;
-    }
 
     .contact-container {
         width: 80%;
     }
-    
+
     .sendmessage {
         padding: 0.5rem;
         font-size: 0.5rem;
